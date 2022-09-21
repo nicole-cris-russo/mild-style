@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/database.js"></script>
+    <script defer src="js/script.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    </style>
+    <title>Mild Style</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="cabecalho">
+        <div class="logo">
+          <h1>mild style</h1>
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="#">Todos</a></li>
+            <li><a href="#">Camisetas</a></li>
+            <li><a href="#">Moletons</a></li>
+            <li><a href="#">Calças</a></li>
+            <li><a href="#">Acessórios</a></li>
+          </ul>
+        </div>
+      </header>
+      <section class="box">
+        <section class="vitrine"></section>
+
+        <section class="area-direita">
+          <div class="area-de-pesquisa">
+            <form class="form-pesquisa">
+              <input type="text" class="inputValue" />
+              <button class="inputButton">Pesquisar</button>
+            </form>
+          </div>
+          <div class="area-carrinho">
+            <h3>Carrinho de compras</h3>
+            <div class="produtos-no-carrinho">
+              <ul class="ulCart"></ul>
+              <div class="empty">
+                <h2>Carrinho Vazio</h2>
+                <p>Adicione Itens</p>
+              </div>
+            </div>
+            <div class="valueTotal"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

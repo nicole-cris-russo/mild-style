@@ -1,0 +1,332 @@
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* -------------------Body-------------------*/
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #543c1c;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/*--------Área de cabeçalho - header---------*/
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 75px;
+  box-shadow: 0 0 25px rgb(210, 187, 164);
+  background-color: rgb(255, 255, 255);
+}
+
+.logo {
+  font-family: "Caveat", cursive;
+  font-size: 25px;
+  margin-left: 5%;
+}
+
+.links {
+  width: 40%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.links ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.links ul li {
+  margin-right: 5%;
+}
+
+.links ul li a {
+  color: #543c1c;
+}
+
+.links ul li a:hover {
+  color: rgb(240, 140, 39);
+  text-decoration: underline wavy;
+}
+
+/*-----------Box------------*/
+
+.box {
+  max-width: 1200px;
+  min-width: 320px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px 50px 50px 50px;
+}
+
+/*---------Vitrine----------*/
+
+.vitrine {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  /*border: 1px solid black;*/
+}
+
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 250px;
+  padding: 15px;
+  margin-right: 25px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(207, 158, 109, 0.069);
+}
+
+.produto:hover {
+  border: 2px solid rgba(207, 158, 109, 0.64);
+}
+
+.produto img {
+  width: 200px;
+  height: 200px;
+  /*border: 3px solid rgb(100, 65, 65);*/
+}
+
+.link-categoria-produto {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(100, 71, 65);
+  padding: 0 10px 0 10px;
+  background-color: rgb(189, 163, 132);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 0 10px 10px 10px;
+}
+
+.link-categoria-produto:hover {
+  border: 2px solid rgb(86, 60, 32);
+  border-radius: 0 10px 10px 10px;
+}
+
+.nome-produto {
+  font-size: 16px;
+  margin: 5px 0 5px 0;
+}
+
+.paragrafo-produto {
+  font-size: 12px;
+}
+
+.preco-produto {
+  font-weight: bold;
+  color: #543c1c;
+}
+
+.adicionar-ao-carrinho {
+  display: block;
+  margin: auto;
+  padding: 8px 15px 8px 15px;
+  color: #543c1c;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 0 10px 0 10px;
+  cursor: pointer;
+}
+
+.adicionar-ao-carrinho:hover {
+  color: rgb(240, 140, 39);
+  text-decoration: underline wavy;
+}
+
+/*----Carrinho de compras e Pesquisa----*/
+
+.area-direita {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 280px;
+  /*border: 1px solid black;*/
+}
+
+.area-de-pesquisa input {
+  width: 180px;
+  height: 35px;
+  padding-left: 12px;
+  border: 2px solid rgb(226, 199, 167);
+  border-radius: 10px 0 10px 10px;
+}
+
+.area-de-pesquisa input:focus {
+  border: 2px solid rgb(188, 158, 121);
+}
+
+.area-de-pesquisa button {
+  height: 39px;
+  padding: 0 10px 0 10px;
+  color: white;
+  background-color: rgb(139, 116, 88);
+  border: none;
+  border-radius: 0 10px 10px 10px;
+  cursor: pointer;
+}
+
+.area-carrinho {
+  position: sticky;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  margin-top: 40px;
+  background-color: rgba(144, 102, 69, 0.169);
+  border-radius: 0 0 10px 10px;
+}
+
+.area-carrinho h3 {
+  font-size: 16px;
+  padding: 5px;
+  color: white;
+  background-color: rgb(139, 116, 88);
+}
+
+.area-carrinho h2 {
+  font-size: 18px;
+}
+
+/*------Produtos adicionados no carrinho-------*/
+
+.produtos-no-carrinho {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+/* Largura da barra de rolagem */
+.produtos-no-carrinho::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Fundo da barra de rolagem */
+.produtos-no-carrinho::-webkit-scrollbar-track-piece {
+  border: none;
+}
+
+/* Cor do indicador de rolagem */
+.produtos-no-carrinho::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #887256;
+  border-radius: 5px;
+}
+
+/* Cor do indicador de rolagem - ao passar o mouse */
+.produtos-no-carrinho::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: #543c1c;
+}
+
+.empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+.ulCart {
+  width: 100%;
+  height: 100%;
+}
+
+.divCardCart {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  margin: 5px 0px;
+  gap: 20px;
+}
+
+.divCardCart .divImg {
+  height: 55px;
+  width: 55px;
+  border-radius: 3px;
+  background-position: center;
+  overflow: hidden;
+}
+
+.divCardCart .divImg img {
+  height: 100%;
+  width: auto;
+}
+
+.divRightCard {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 70%;
+}
+
+.divCardCart .divTitle {
+  display: flex;
+  position: relative;
+}
+
+.divCardCart .divTitle span {
+  font-size: 12px;
+  width: 85%;
+  text-align: left;
+}
+
+.divCardCart .divTitle button {
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+.divCardCart .divTitle img {
+  width: 15px;
+  height: 15px;
+}
+
+.divCardCart .divPreco {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* value total */
+
+.valueTotal {
+  width: 100%;
+  height: 40px;
+}
+
+.valueTotal div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #887256;
+  color: #ffffff;
+}
